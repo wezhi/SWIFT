@@ -9,7 +9,7 @@
 class Snow
 {
     /**
-     * »ñÈ¡IPµØÖ·
+     * è·å–ipåœ°å€
      * @return string
      */
     function GetIP(){
@@ -29,7 +29,7 @@ class Snow
     }
 
     /**
-     * »ñÈ¡IPµØÖ·¶ÔÓ¦µÄ³ÇÊĞĞÅÏ¢
+     * æ ¹æ®IPåœ°å€è·å–åŸå¸‚ä¿¡æ¯
      * @param null $ip
      * @return mix|string
      */
@@ -48,7 +48,7 @@ class Snow
     }
 
     /**
-     * »ñÈ¡²Ù×÷ÏµÍ³
+     * è·å–æ“ä½œç³»ç»Ÿç±»å‹
      * @return string
      */
     function GetOS(){
@@ -70,12 +70,12 @@ class Snow
             }
             return $OS;
         }else{
-            return "»ñÈ¡·Ã¿Í²Ù×÷ÏµÍ³ĞÅÏ¢Ê§°Ü£¡";
+            return "ï¿½ï¿½È¡ï¿½Ã¿Í²ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ï¢Ê§ï¿½Ü£ï¿½";
         }
     }
 
     /**
-     * »ñÈ¡ä¯ÀÀÆ÷
+     * è·å–æµè§ˆå™¨ç±»å‹
      * @return string
      */
     function GetBrowser(){
@@ -95,11 +95,11 @@ class Snow
                 $br = 'Other';
             }
             return $br;
-        }else{return "»ñÈ¡ä¯ÀÀÆ÷ĞÅÏ¢Ê§°Ü£¡";}
+        }else{return "ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Ê§ï¿½Ü£ï¿½";}
     }
 
     /**
-     * »ñÈ¡ä¯ÀÀÆ÷ÓïÑÔ
+     * è·å–æµè§ˆå™¨è¯­è¨€
      * @return string
      */
     function GetBrowserLang(){
@@ -107,16 +107,16 @@ class Snow
             $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $lang = substr($lang,0,5);
             if(preg_match("/zh-cn/i",$lang)){
-                $lang = "¼òÌåÖĞÎÄ";
+                $lang = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
             }elseif(preg_match("/zh/i",$lang)){
-                $lang = "·±ÌåÖĞÎÄ";
+                $lang = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
             }else{
                 $lang = "English";
             }
             return $lang;
 
         }else{
-            return "»ñÈ¡ä¯ÀÀÆ÷ÓïÑÔÊ§°Ü£¡";
+            return "ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½";
         }
     }
 }

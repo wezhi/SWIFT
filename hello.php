@@ -1,17 +1,13 @@
 <?php
-require_once("Snow.php");
+//require_once("Snow.php");
+require_once("Frost.php");
 
-$snow = new Snow();
-echo $snow->GetOS();
-echo "<br />";
-echo $snow->GetBrowser();
-echo "<br />";
-echo $snow->GetBrowserLang();
-echo "<br />";
-echo $snow->GetIP();
-echo "<br />";
-echo $snow->GetAddress();
-//echo str_replace('	','',$snow->GetAddress("120.25.69.157"));
-
-echo "<hr />";
-echo date('Y-m-d H:i:s',time());
+$db = new dbPdo('mysql:host=120.25.69.157;dbname=cailanzi','root','6RMPKLamQ7rajAZb');
+$db->hello();
+//$db = new PDO('mysql:host=120.25.69.157;dbname=cailanzi','root','6RMPKLamQ7rajAZb');
+//var_dump($db);
+$sql = "select fareaid,fareaname,fareaorder from ecs_sf_area";
+$rows = $db->getAll($sql);
+foreach ($rows as $rw){
+	echo $rw['fareaid'].':'.$rw['fareaname'].':'.$rw['fareaorder']."\n";
+}
